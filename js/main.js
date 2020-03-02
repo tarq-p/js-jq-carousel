@@ -1,10 +1,13 @@
 
 $(document).ready(function(){
-    var Slidelaps = 0;
+    var slideLaps = 0;
     var clock = setInterval(function(){
         nextSlide()
-        Slidelaps++;
+        slideLaps++;
     }, 4000);
+    if (slideLaps == 2) {
+    clearInterval(clock);
+}
 });
 
 $('.next').click(nextSlide);        // Al click richiamo la funzione per aggiornare l'immagine visualizzando la successiva
@@ -48,7 +51,7 @@ $('.next').click(nextSlide);        // Al click richiamo la funzione per aggiorn
 
             // Pallini
             $('.slider-nav i.active').removeClass('active');
-            $('.slider-nav i.first').addClass('active');
+            $('.slider-nav i.last').addClass('active');
 
         } else {
             var imgAttiva = $('.images img.active'); // Rimuovo l'active
