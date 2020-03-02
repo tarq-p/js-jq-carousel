@@ -1,5 +1,4 @@
 
-
 $(document).ready(function(){
     var Slidelaps = 0;
     var clock = setInterval(function(){
@@ -9,7 +8,6 @@ $(document).ready(function(){
 });
 
 $('.next').click(nextSlide);        // Al click richiamo la funzione per aggiornare l'immagine visualizzando la successiva
-
 
     // Definisco le funzioni nextImage
     function nextSlide() {
@@ -59,7 +57,7 @@ $('.next').click(nextSlide);        // Al click richiamo la funzione per aggiorn
             imgAttiva.removeClass('active');
             precedenteImg.addClass('active');
 
-            Pallini
+            // Pallini
             var pallinoAttivo = $('.slider-nav i.active'); // Rimuovo l'active
             var precedentePallino = $('.slider-nav i.active').prev();
 
