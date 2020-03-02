@@ -1,10 +1,17 @@
-$(document).ready(function() {
-
-    // Invoco le funzioni per cambiare slide
-    $('.next').click(nextSlide);        // Al click richiamo la funzione per aggiornare l'immagine visualizzando la successiva
 
 
-    // Definisco le funzioni nextImage e prevImage
+$(document).ready(function(){
+    var Slidelaps = 0;
+    var clock = setInterval(function(){
+        nextSlide()
+        Slidelaps++;
+    }, 4000);
+});
+
+$('.next').click(nextSlide);        // Al click richiamo la funzione per aggiornare l'immagine visualizzando la successiva
+
+
+    // Definisco le funzioni nextImage
     function nextSlide() {
         if ( $('.images img.active').hasClass('last') ) {
 
@@ -34,8 +41,7 @@ $(document).ready(function() {
     // Invoco le funzioni per cambiare slide
     $('.prev').click(prevSlide);        // Al click richiamo la funzione per aggiornare l'immagine visualizzando la precedente
 
-
-    // Definisco le funzioni nextImage e prevImage
+    // Definisco le funzioni prevImage
     function prevSlide() {
         if ( $('.images img.active').hasClass('first') ) {
 
@@ -61,6 +67,3 @@ $(document).ready(function() {
             precedentePallino.addClass('active');
         }
     }
-
-
-});
